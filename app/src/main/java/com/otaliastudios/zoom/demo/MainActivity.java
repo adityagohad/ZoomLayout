@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         final ZoomImageView zoomImage = findViewById(R.id.zoom_image);
         zoomImage.setImageDrawable(new ColorGridDrawable());
 
+        zoomLayout.getEngine().factor(0.6f);
+
         buttonZoomLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

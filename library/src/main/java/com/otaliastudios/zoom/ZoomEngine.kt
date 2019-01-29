@@ -1742,6 +1742,10 @@ internal constructor(context: Context) : ViewTreeObserver.OnGlobalLayoutListener
         return PointF(scaledPanX - scaledPoint.x, scaledPanY - scaledPoint.y)
     }
 
+    public fun factor(value:Float){
+        DEFAULT_OVERSCROLL_FACTOR = value
+    }
+
     //endregion
 
     companion object {
@@ -1754,7 +1758,7 @@ internal constructor(context: Context) : ViewTreeObserver.OnGlobalLayoutListener
         /**
          * The default overscrolling factor
          */
-        private val DEFAULT_OVERSCROLL_FACTOR = 0.10f
+        var DEFAULT_OVERSCROLL_FACTOR = 0.10f
 
         // TODO Make public, add API. Use androidx.Interpolator?
         private val ANIMATION_INTERPOLATOR = AccelerateDecelerateInterpolator()
